@@ -1,0 +1,133 @@
+--item table;;
+INSERT INTO item (item_id, sku, item_namme, item_categ, item_size, item_price)
+VALUES 
+('it001', 'PIZZ-MARG-R', 'Margherita Reg', 'Pizza', 'Regular',13),
+('it002', 'PIZZ-MARG-L', 'Margherita Large', 'Pizza', 'Large',15),
+('it003', 'PIZZ-DIAV-R', 'Diavola Reg', 'Pizza', 'Regular',16),
+('it004', 'PIZZ-DIAV-L', 'Diavola Large', 'Pizza', 'Large',19),
+('it005', 'PIZZ-PARM-R', 'Parmigiana Reg', 'Pizza', 'Regular',15),
+('it006', 'PIZZ-PARM-L', 'Parmigiana Large', 'Pizza', 'Large',18),
+('it007', 'PIZZ-QUAT-R', 'Quattro Formaggi Reg', 'Pizza', 'Regular',16),
+('it008', 'PIZZ-QUAT-L', 'Quattro Formaggi Large', 'Pizza', 'Large',19),
+('it009', 'PIZZ-NAPO-R', 'Napolitana Reg', 'Pizza', 'Regular',16),
+('it010', 'PIZZ-NAPO-L', 'Napolitana Large', 'Pizza', 'Large',18),
+('it011', 'PIZZ-PEPP-R', 'Pepperoni Reg', 'Pizza', 'Regular',15),
+('it012', 'PIZZ-PEPP-L', 'Pepperoni Large', 'Pizza', 'Large',17),
+('it013', 'PIZZ-SEAF-R', 'Seafood Reg', 'Pizza', 'Regular',17),
+('it014', 'PIZZ-SEAF-L', 'Seafood Large', 'Pizza', 'Large',20),
+('it015', 'PIZZ-HAWA-R', 'Hawaiian Reg', 'Pizza', 'Regular',15),
+('it016', 'PIZZ-HAWA-L', 'Hawaiian Large', 'Pizza', 'Large',17),
+
+
+--recipe table;;
+INSERT INTO recipe (row_id, recipe_id, ing_id, quantity)
+VALUES (1, 'PIZZ-MARG-R', 'ING001', 2),
+       (2, 'PIZZ-MARG-R', 'ING002', 200),
+       (3, 'PIZZ-MARG-R', 'ING003', 200),
+       (4, 'PIZZ-MARG-R', 'ING004', 2),
+       (5, 'R002', 'ING005', 200),
+       (6, 'R002', 'ING006', 200);
+
+
+--Ingredient table;
+INSERT INTO ingredient (ing_id, ing_name, ing_weight, ing_meas, ing_price)
+VALUES
+('ING001', 'Pizza dough ball (8 pack)', 2000, 'grams', 4.2),
+('ING002', 'Tomato Sauce', 4500, 'grams', 3.89),
+('ING003', 'Mozzarella', 2500, 'grams', 14.45),
+('ING004', 'Dried oregano', 500, 'grams', 5.99),
+('ING005', 'Spicy salami', 3500, 'grams', 37.64),
+('ING006', 'Chilli pepper', 1000, 'grams', 6.49),
+('ING007', 'Eggplant', 1000, 'grams', 1.9),
+('ING008', 'Parmesan cheese', 2500, 'grams', 18.75),
+('ING009', 'Gorgonzola cheese', 3500, 'grams', 27.64),
+('ING010', 'Ricorra cheese', 1500, 'grams', 3.99),
+('ING011', 'Anchovies', 1000, 'grams', 10.99),
+('ING012', 'Capers', 1000 'grams', 4.16),
+('ING013', 'Pepperini', 2500, 'grams', 24.18),
+('ING014', 'Shrimp', 1000, 'grams', 8.98),
+('ING015', 'Tuna', 2000, 'grams', 7.66),
+('ING016', 'Calamari', 2500, 'grams', 28.77),
+('ING017', 'Ham', 5000, 'grams', 32.45),
+('ING018', 'Pineapple', 5000, 'grams', 6.23);
+('ING019', 'Ciabatta', 5, 'slices', 5.2);
+('ING020', 'Garlic butter', 200, 'grams', 10.5);
+('ING021', 'Parsley', 100, 'grams', 3.2);
+('ING022', 'Chicken Wings', 500, 'grams', 4.5);
+('ING023', 'BBQ sauce', 50, 'grams', 2.4);
+('ING024', 'Solt and pepper', 50, 'grams', 1.6);
+('ING025', 'Bread', 200, 'grams', 0.5);
+('ING026', 'Bacon', 100, 'grams', 3.5);
+('ING027', 'Lettuce', 100, 'grams', 2.3);
+('ING028', 'Tomato', 200, 'grams', 1.4);
+('ING029', 'Croutons', 100, 'grams', 0.9);
+('ING030', 'Caesar dressing', 50, 'grams', 0.4);
+('ING031', 'Chocolate Ice Cream', 50, 'grams', 2.3);
+('ING032', 'Vanilla Ice Cream', 50, 'grams', 2.3);
+('ING033', 'Strawberry Ice Cream', 50, 'grams', 2.3);
+('ING034', 'Pistachio Ice Cream', 50, 'grams', 2.3);
+('ING035', 'Chocolate Brownie', 100, 'grams', 2.3);
+('ING036', 'Banoffe Pie', 200, 'grams', 2.6);
+('ING037', 'Fruits mix', 200, 'grams', 3.4);
+('ING038', 'Syrup', 50, 'grams', 0.3);
+
+--Item table;;
+INSERT INTO item (item_id, sku, item_name, item_categ, item_size, item_price)
+VALUES
+('it001', 'PIZZ-MARG-R', 'Margherita Reg', 'Pizza', 'Regular', 13),
+('it002', 'PIZZ-MARG-L', 'Margherita Large', 'Pizza', 'Large', 15),
+('it003', 'PIZZ-DIAV-R', 'Diavola Reg', 'Pizza', 'Regular', 16),
+('it004', 'PIZZ-DIAV-L', 'Diavola Large', 'Pizza', 'Large', 19),
+('it005', 'PIZZ-PARM-R', 'Parmigiana Reg', 'Pizza', 'Regular', 15),
+('it006', 'PIZZ-PARM-L', 'Parmigiana Large', 'Pizza', 'Large', 18),
+('it007', 'PIZZ-QUAT-R', 'Quattro Formaggi Reg', 'Pizza', 'Regular', 16),
+('it008', 'PIZZ-QUAT-L', 'Quattro Formaggi Large', 'Pizza', 'Large', 19),
+('it009', 'PIZZ-NAPO-R', 'Napolitana Reg', 'Pizza', 'Regular', 16),
+('it010', 'PIZZ-NAPO-L', 'Napolitana Large', 'Pizza', 'Large', 18),
+('it011', 'PIZZ-PEPP-R', 'Pepperoni Reg', 'Pizza', 'Regular', 15),
+('it012', 'PIZZ-PEPP-L', 'Pepperoni Large', 'Pizza', 'Large', 17),
+('it013', 'PIZZ-SEAF-R', 'Seafood Reg', 'Pizza', 'Regular', 17),
+('it014', 'PIZZ-SEAF-L', 'Seafood Large', 'Pizza', 'Large', 20),
+('it015', 'PIZZ-HAWA-R', 'Hawaiian Reg', 'Pizza', 'Regular', 15),
+('it016', 'PIZZ-HAWA-L', 'Hawaiian Large', 'Pizza', 'Large', 17),
+('it017', 'SIDE-GARL-R', 'Garlic Bread', 'Food', 'Regular', 6),
+('it018', 'SIDE-CHIC-R', 'Chicken Wings', 'Food', 'Regular', 7),
+('it019', 'SIDE-BREA-R', 'Breadsticks', 'Food', 'Regular', 5),
+('it020', 'SIDE-CASE-R', 'Caesar Salad', 'Food', 'Regular', 7),
+('it021', 'DESS-ICE-CHOC', 'Chocolate Ice Cream', 'Dessert', 'Regular', 6),
+('it022', 'DESS-ICE-VANI', 'Vanilla Ice Cream', 'Dessert', 'Regular', 6),
+('it023', 'DESS-ICE-STRA', 'Strawberry Ice Cream', 'Dessert', 'Regular', 6),
+("it024", "DESS-ICE-PIST", "Pistachio Ice Cream", "Dessert", "Regular", 6),
+("it025", "DESS-CHOC-BROW", "Chocolate Brownie", "Dessert", "Regular", 5),
+("it026", "DESS-BANO-PIE", "Banoffe Pie", "Dessert", "Regular", 7),
+("it027", "DESS-FRUI-SALA", "Fruit Salad", "Dessert", "Regular", 5),
+("it028", "BEVER-COKE-S", "Coca Cola Small", "Beverage", "Small", 3),
+("it029", "BEVER-COKE-M", "Coca Cola Medium", "Beverage", "Medium", 6),
+("it030", "BEVER-DC-S", "Diet Coke Small", "Beverage", "Small", 3),
+("it031", "BEVER-DC-M", "Diet Coke Medium", "Beverage", "Medium", 6),
+("it032", "BEVER-FAN-S", "Fanta Small", "Beverage", "Small", 3),
+("it033", "BEVER-FAN-M", "Fanta Medium", "Beverage", "Medium", 6),
+("it034", "BEVER-WAT-S", "Water Small", "Beverage", "Small", 2),
+("it035", "BEVER-WAT-M", "Water Medium", "Beverage", "Medium", 4);
+
+
+--Staff table;;
+INSERT INTO staff (staff_id, first_name, last_name, position, hourly_rate)
+VALUES 
+('st0001', 'Amanda', 'Smith', 'Chef', 17.25),
+('st0002', 'James', 'Johnson', 'Head Chef', 25),
+('st0003', 'Sarah', 'Brown', 'Chef', 17.25),
+('st0004', 'Michael', 'Davis', 'Head Chef', 25),
+('st0005', 'Jessica', 'Anderson', 'Chef', 17.25),
+('st0006', 'William', 'Wilson', 'Head Chef', 25),
+('st0007', 'Elizabeth', 'Jones', 'Chef', 17.25),
+('st0008', 'David', 'Martinez', 'Head Chef', 25),
+('st0009', 'Ashley', 'Gonzalez', 'Delivery rider', 14.5),
+('st0010', 'John', 'Nelson', 'Delivery rider', 14.5),
+('st0011', 'Lauren', 'Lee', 'Delivery rider', 14.5),
+('st0012', 'Brian', 'Taylor', 'Delivery rider', 14.5),
+('st0013', 'Jennifer', 'Scott', 'Delivery rider', 14.5),
+('st0014', 'Matthew', 'Jackson', 'Delivery rider', 14.5),
+('st0015', 'Kimberly', 'Perez', 'Delivery rider', 14.5),
+('st0016', 'Christopher', 'Edwards', 'Delivery rider', 14.5);
+
