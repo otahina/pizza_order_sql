@@ -38,8 +38,8 @@ CREATE TABLE item (
 );
 
 CREATE TABLE recipe (
-  row_id INT PRIMARY KEY,
-  recipe_id VARCHAR(20)
+  row_id VARCHAR(20) PRIMARY KEY,
+  recipe_id VARCHAR(50)
   ing_id VARCHAR(10),
   quantity INT
   FOREIGN KEY (recipe_id) REFERENCES item(sku)
