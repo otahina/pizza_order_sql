@@ -1,0 +1,87 @@
+CREATE TABLE orders (
+  row_id INT AUTO_INCREMENT PRIMARY KEY,
+  order_id VARCHAR(10) NOT NULL,
+  created_at DATETIME NOT NULL,
+  item_id VARCHAR(10) NOT NULL,
+  quantity INT NOT NULL,
+  cust_id INT NOT NULL,
+  delivery BOOLEAN NOT NULL,
+  add_id INT
+);
+
+CREATE TABLE customers (
+  cust_id INT NOT NULL PRIMARY KEY,
+  cust_firstname VARCHAR(30), NOT NULL,
+  cust_lastname VARCHAR(30), NOT NULL
+);
+
+CREATE TABLE 'address' (
+  add_id INT PRIMARY KEY,
+  delivery_address1 VARCHAR(200),
+  delivery_address2 VARCHAR(200),
+  delivery_city VARCHAR(50),
+  delivery_zipcode VARCHAR(20),
+  FOREIGN KEY (add_id) REFERENCES orders(add_id)
+);
+
+CREATE TABLE item (
+  item_id INT PRIMARY KEY,
+  sku VARCHAR(20),
+  item_name VARCHAR(100),
+  item_categ VARCHAR(100),
+  item_size VARCHAR(10),
+  item_price DECIMAL(10, 2)
+  FOREIGN KEY (item_id) REFERENCES orders(item_id)
+);
+
+CREATE TABLE recipe (
+  row_id INT PRIMARY KEY,
+  recipe_id VARCHAR(20)
+  ing_id VARCHAR(10),
+  quantity INT
+  FOREIGN KEY (recipe_id) REFERENCES item(sku)
+);
+
+CREATE TABLE ingredient (
+  ing_id VARCHAR(10) PRIMARY KEY,
+  ing_name VARCHAR(200),
+  ing_weight INT,
+  ing_meas VARCHAR(20),
+  ing_price DECIMAL(5, 2)
+  FOREIGN KEY (ing_id) REFERENCES recipe(ing_id)
+);
+
+CREATE TABLE inventory (
+  inv_id INT PRIMARY KEY,
+  item_id VARCHAR(20)
+  quantity INT
+  FOREIGN KEY (item_id) REFERENCES recipe(ing_id)
+);
+
+CREATE TABLE staff (
+  staff_id VARCHAR(20) PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  position VARCHAR(100),
+  hourly_rate DECIMAL(5, 2)
+);
+
+CREATE TABLE shift (
+  staff_id VARCHAR(20) PRIMARY KEY,
+  day_of_week VARCHAR(10),
+  start_time TIME,
+  end_time TIME
+);
+
+CREATE TABLE rota (
+  row_id INT PRIMARY KEY,
+  rota_id VARCHAR(20),
+  'date' DATETIME,
+  shift_id VARCHAR(20),
+  staff_id VARCHAR(20)
+  FOREIGN KEY (staff_id) REFERENCES staff(staff_id)
+  FOREIGN KEY ('date') REFERENCES orders(created_at)
+  FOREIGN KEY (shift_id) REFERENCES shift(shift_id)
+);
+
+
